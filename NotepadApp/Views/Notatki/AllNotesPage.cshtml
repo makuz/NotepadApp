@@ -1,0 +1,43 @@
+﻿@model NotepadApp.Models.NotesPageViewModel
+
+@{
+    ViewBag.Title = "AllNotesPage";
+}
+
+<h2>AllNotesPage</h2>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>content</th>
+        <th>akcje</th>
+
+    </tr>
+    @foreach (var item in Model.AllNotes)
+    {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+                @item.Title
+            </td>
+            <td>
+                @item.Content
+            </td>
+            <td>
+               @* @Html.ActionLink*@
+               
+                
+                @using (Html.BeginForm("DeleteNote", "Notatki", FormMethod.Post))
+                {
+                    <input type="hidden" name="Id" value="@item.Id"/>
+                    <input class="btn btn-danger" type="submit" value="delete"/>
+                }
+                <a href="@Url.Action("Edit", new { Id = item.Id})" class="btn btn-success">edit</a>
+                
+            </td>
+
+        </tr>
+    }
+</table>

@@ -1,10 +1,11 @@
 ﻿
-@model NotepadApp.Models.NotesPageViewModel
+@model NotepadApp.Models.EditViewModel
+
 @{
-    ViewBag.Title = "NotatkiPage";
+    ViewBag.Title = "EditNotePage";
 }
 
-<h2>add new notatka</h2>
+<h2>EditNotePage</h2>
 
 @using (Html.BeginForm())
 {
@@ -20,8 +21,7 @@
         @Html.ValidationMessageFor(m => m.NoteModel.Content)
     </div>
     <div class="form-group">
-        <input type="submit" value="dodaj" class="btn btn-success" />
-       
+        <input type="submit" value="edytuj" class="btn btn-success" />
+
     </div>
 }
-

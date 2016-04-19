@@ -86,3 +86,5 @@ c:\users\makuz\documents\visual studio 2015\Projects\NotepadApp\NotepadApp\bin\M
 c:\users\makuz\documents\visual studio 2015\Projects\NotepadApp\NotepadApp\obj\Debug\NotepadApp.csprojResolveAssemblyReference.cache
 c:\users\makuz\documents\visual studio 2015\Projects\NotepadApp\NotepadApp\obj\Debug\NotepadApp.dll
 c:\users\makuz\documents\visual studio 2015\Projects\NotepadApp\NotepadApp\obj\Debug\NotepadApp.pdb
+c:\users\makuz\documents\visual studio 2015\Projects\NotepadApp\NotepadApp\obj\Debug\NotepadApp.Migrations.NotepadApp2.resources
+c:\users\makuz\documents\visual studio 2015\Projects\NotepadApp\NotepadApp\obj\Debug\NotepadApp.csproj.GenerateResource.Cache

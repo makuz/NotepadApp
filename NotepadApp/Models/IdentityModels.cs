@@ -29,5 +29,8 @@ namespace NotepadApp.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<NoteModel> Notes { get; set; }
+
     }
 }
