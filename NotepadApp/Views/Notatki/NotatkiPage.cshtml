@@ -1,0 +1,18 @@
+﻿
+@model NotepadApp.Models.NoteModel
+@{
+    ViewBag.Title = "NotatkiPage";
+}
+
+<h2>add new notatka</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.Title)
+    @Html.TextBoxFor(m => m.Title)
+    @Html.LabelFor(m => m.Content)
+    @Html.TextAreaFor(m => m.Title)
+
+    <input type="submit" value="dodaj" />
+}
+
