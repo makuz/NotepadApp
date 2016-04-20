@@ -31,7 +31,7 @@
                 
                 @using (Html.BeginForm("DeleteNote", "Notatki", FormMethod.Post))
                 {
-                    <input type="hidden" name="Id" value="@item.Id"/>
+                    <input type="hidden" name="id" value="@item.Id"/>
                     <input class="btn btn-danger" type="submit" value="delete"/>
                 }
                 <a href="@Url.Action("Edit", new { Id = item.Id})" class="btn btn-success">edit</a>

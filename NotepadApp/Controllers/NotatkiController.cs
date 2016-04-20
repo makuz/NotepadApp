@@ -47,27 +47,25 @@ namespace NotepadApp.Controllers
             return View("AllNotesPage", noteViewModel);
 
         }
-        public ActionResult DeleteNote(long Id)
+        public ActionResult DeleteNote(long id)
         {
 
             using (var ctx = new ApplicationDbContext())
             {
-                NoteModel Note = ctx.Notes.Single(n => n.Id == Id);
+                var Note = ctx.Notes.Single(n => n.Id == id);
                 ctx.Notes.Remove(Note);
                 ctx.SaveChanges();
             }
 
-            return View("AllNotesPage");
+            return RedirectToAction("ShowAll");
         }
 
-        public ActionResult Edit(long Id)
+        public ActionResult Edit(long id)
         {
             var viewmodel = new EditViewModel();
             using (var ctx = new ApplicationDbContext())
             {
-                var Note = ctx.Notes.Single(n => n.Id == Id);
-                ctx.Notes.Remove(Note);
-                ctx.SaveChanges();
+                var Note = ctx.Notes.Single(n => n.Id == id);
                 viewmodel.NoteModel = Note;
             }
 

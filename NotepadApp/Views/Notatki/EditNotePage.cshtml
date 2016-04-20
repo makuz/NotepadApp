@@ -20,6 +20,7 @@
         @Html.TextAreaFor(m => m.NoteModel.Content, new { @Class = "form-control" })
         @Html.ValidationMessageFor(m => m.NoteModel.Content)
     </div>
+    @Html.HiddenFor(m => m.NoteModel.Id)
     <div class="form-group">
         <input type="submit" value="edytuj" class="btn btn-success" />
 
